@@ -1,0 +1,23 @@
+h1{
+    text-align: start;
+    background-color: black;
+    color: white;
+    padding:10px;
+}
+
+h2{
+    background-color: blueviolet;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+h3{
+    text-align: right;
+    text-decoration: underline;
+    padding: 10px;
+    background-color:#9FC5F8;
+}
+strong{
+    color: #00FFFF;
+}

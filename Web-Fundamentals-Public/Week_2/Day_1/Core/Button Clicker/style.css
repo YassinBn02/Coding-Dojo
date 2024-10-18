@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.navBar{
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 580px;
+    padding: 30px;
+}
+.box{
+    display: flex;
+    padding-top: 30px;
+    gap: 20px;
+}
+.box-1{
+    border: 3px solid black;
+    display: flex;
+    padding: 10px;
+    width:400px ;
+}
+.likes{
+    margin-top: 20px;
+    background-color: yellow;
+    box-shadow: 2px 2px 0px black;
+    height: 30px;
+    width: 70px;
+}
+p{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+span{
+    color: #2B78E4;
+    text-decoration: underline;
+}
+.box-2{
+    border: 3px solid black;
+    display: flex;
+    padding: 10px;
+    width:400px ;
+    margin-top: 20px;
+}
+.col-2{
+    border: 3px solid black; 
+    height: 90px;
+    padding: 20px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.add{
+    background-color: green;
+    box-shadow: 2px 2px 0px black;
+    height: 40px;
+}
+.col-2 span{
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+}
+.navBar button{
+    box-shadow: 2px 2px 0px black;
+    height: 30px;
+    width: 70px;
+    background-color: #2B78E4;
+}

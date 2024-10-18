@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <div>
+        <label>First Name:*  </label><input type="text" name="first name"><br>
+        <label>Last Name:*   </label><input type="text" name="last name"><br>
+        <label>Email Address:* </label><input type="text" name="email address"><br>
+        <label>Password:*    </label><input type="password" name="Password"><br>
+        <label>Confirm password:* </label><input type="password" name="Confirm password"><br>
+        <label>Birthday:*   </label><input type="date" name="Birthday"><br>
+    </div>
+    <h4>Gender Identy:</h4>
+    <div>
+        <input type="radio" name="font" value="Male" id="Male"><label for="Male">Male</label>
+        <input type="radio" name="font" value="Female" id="Female"><label for="Male">Female</label>
+        <input type="radio" name="font" value="Non-binary" id="Non-binary"><label for="Non-binary">Non-binary</label>
+        <input type="radio" name="font" value="I-prefer-not-to-answer" id="I-prefer-not-to-answer">
+        <label for="I-prefer-not-to-answer">I prefer not to anwer</label>
+    </div>
+    <div>
+        <label>A short desecription about myself:</label><br>
+        <textarea name="desecription" cols="20" rows="3"></textarea>
+    </div>
+    <label>Favorite Language:  </label>
+    <select name="Language">
+        <option value="Javascript">Javascript</option>
+        <option value="Html">Html</option>
+        <option value="CSS">CSS</option>
+    </select><br>
+    <input type="checkbox" name="Yes" id="Yes"><label>Yes,I would like to receive email updates</label><br>
+    <input type="submit" value="Create Account"><br>
+    <label>* Indicate a required filed</label>
+</body>
+</html>
