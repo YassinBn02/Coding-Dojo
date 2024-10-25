@@ -2,13 +2,13 @@
 #chalange 1
 
 class Player:
-    def __init__(self,dict):
-        self.name = dict['name']
-        self.age = dict['age']
-        self.position = dict['position']
-        self.team = dict['team']
+    def __init__(self,player_data):
+        self.name = player_data['name']
+        self.age = player_data['age']
+        self.position = player_data['position']
+        self.team = player_data['team']
     def display(self):
-        print(f"{self.name} , {self.age} , {self.position} , {self.team}")
+        return f"{self.name} , {self.age} , {self.position} , {self.team}"
 #chalange 2
 kevin = {
     	"name": "Kevin Durant", 
