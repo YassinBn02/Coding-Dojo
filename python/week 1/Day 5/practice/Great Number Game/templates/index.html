@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='style.css')}}">
     <title>Document</title>
 </head>
 <body>
@@ -13,8 +14,10 @@
             <input type="text" name="number">
             <button>submit</button>
         </form>
-        {% if hint : %}
-            <h3>{{hint}}</h3>
+        {% if hint and hint=="Good job you got the right answer" : %}
+            <h3 style="color: green;">{{hint}}</h3>
+        {% else %}
+            <h3 style="color: red;">{{hint}}</h3>
         {% endif %}
         <a href="/reset"><button>Reset</button></a>
     </div>
