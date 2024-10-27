@@ -8,15 +8,10 @@ def render():
 
 @app.route('/submit',methods=['POST'])
 def submit():
-    name = request.form['name']
-    location= request.form['location']
-    language= request.form['language']
-    comment = request.form['comment']
-
-    session['name']=name
-    session['location']=location
-    session['language']=language
-    session['comment']=comment
+    session['name']=request.form['name']
+    session['location']=request.form['location']
+    session['language']=request.form['language']
+    session['comment']=request.form['comment']
     return redirect('/result')
 
 @app.route('/result')

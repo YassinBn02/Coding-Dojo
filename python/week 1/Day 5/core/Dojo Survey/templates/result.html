@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            background-color: darkgrey;
+            width: 400px;
+        }
+        h1{
+            color: blue;
+        }
+        a{
+            color: blue;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
-    <h1>submited info</h1>
-    <p>name    {{session['name']}}</p>
-    <p>Dojo location   {{session['location']}}</p>
-    <p>Favorite language   {{session['language']}}</p>
-    <p>comment   {{session['comment']}}</p>
+    <div class="container">
+        <h1>{{session['name']}}</h1>
+        <p>Dojo location : </p>
+        <p>{{session['location']}}</p>
+        <p>Favorite language :   </p>
+        <p>{{session['language']}}</p>
+        <p>comment : </p>
+        <p> {{session['comment']}}</p>
+        <a href="/">Home</a>
+    </div>
 </body>
 </html>
