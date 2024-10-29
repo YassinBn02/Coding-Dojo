@@ -79,4 +79,4 @@ for player_dict in players:
     new_team.append(playerr)
 
 for playerr in new_team:
-    print(playerr.display())
+    playerr.display()
