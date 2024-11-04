@@ -2,6 +2,9 @@ from flask import session,request,render_template,redirect
 from flask_app.models.dojos_model import Dojo
 from flask_app import app
 
+@app.route("/")
+def dojos():
+    return redirect("/dojos")
 @app.route("/dojos")
 def get_dojos():
     list_of_dojos=Dojo.get_all()
