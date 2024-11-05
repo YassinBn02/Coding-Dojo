@@ -27,6 +27,9 @@ class Dojo:
     def get_one(cls,data):
         qurey="select * from dojos join ninjas on ninjas.dojo_id=dojos.id where dojos.id=%(id)s;"
         result=connectToMySQL("dojos_and_ninjas_schema").query_db(qurey,data)
+        if len(result)==0:
+            return None
+        
         dojo=cls(result[0])
         dojo.ninjas=[]
         for row in result:

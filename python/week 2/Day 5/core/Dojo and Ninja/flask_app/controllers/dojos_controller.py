@@ -26,5 +26,6 @@ def ninja_form():
 @app.route("/dojos/<int:id>")
 def get_dojo(id):
     result=Dojo.get_one({"id":id})
-    print(result)
+    if result==None:
+        return render_template("error.html")
     return render_template("show.html",dojo=result)

@@ -1,7 +1,6 @@
-from flask import Flask,session,render_template,request,redirect#type:ignore
+from flask import Flask,session,render_template,request,redirect
 app = Flask(__name__)
 app.secret_key = 'secret_key'
-
 @app.route('/')
 def render():
     return render_template('index.html')
