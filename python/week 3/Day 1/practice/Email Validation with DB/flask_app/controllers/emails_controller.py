@@ -10,10 +10,19 @@ def index():
 def add_email():
     if not Email.validate(request.form):
         return redirect("/")
-    Email.create_one(request.form)
-    return redirect("/success")
+    elif not Email.get_one(request.form):
+        return redirect("/")
+    else:
+        Email.create_one(request.form)
+        return redirect("/success")
 
 @app.route("/success")
 def success():
     list_of_emails=Email.get_all()
     return render_template("success.html",list_of_emails=list_of_emails)
+
+
+@app.route("/delete/<int:id>")
+def delete_email(id):
+    Email.delete_one({"id":id})
+    return redirect("/success")

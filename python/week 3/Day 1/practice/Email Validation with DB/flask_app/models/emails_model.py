@@ -32,3 +32,19 @@ class Email:
             flash("invalid email address")
             is_valid=False
         return is_valid
+
+    @classmethod
+    def delete_one(cls,data):
+        query="delete from emails where id=%(id)s;"
+        result=connectToMySQL(DATABASE).query_db(query,data)
+        return result
+
+    @classmethod
+    def get_one(cls,data):
+        query="select * from emails where email=%(email)s;"
+        result=connectToMySQL(DATABASE).query_db(query,data)
+        if len(result)==0:
+            return True
+        else:
+            flash("The email address is already in the data base")
+            return False
