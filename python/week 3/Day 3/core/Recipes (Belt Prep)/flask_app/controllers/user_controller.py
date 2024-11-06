@@ -25,13 +25,7 @@ def add_user():
         current_user=User.get_one(user_data)
         session["user_id"]=current_user.id
         session["name"]=current_user.first_name
-        return redirect('/dashboard')
-
-@app.route('/dashboard')
-def dashboard():
-    if "user_id"not in session:
-        return redirect('/')
-    return render_template("dashboard.html")
+        return redirect('/recipes')
 
 @app.route('/logout')
 def logout():
@@ -48,4 +42,4 @@ def login():
     else:
         session["user_id"]=user.id
         session["name"]=user.first_name
-        return redirect("/dashboard")
+        return redirect("/recipes")

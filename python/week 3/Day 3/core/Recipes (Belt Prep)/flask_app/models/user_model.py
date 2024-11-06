@@ -56,9 +56,6 @@ class User:
         if len(password)<8:
             is_valid=False
             flash("Password not strong enough","password_validation")
-        if not (password[0].isupper()):
-            is_valid=False
-            flash("The first caracter must be Uppercase","password_validation")
         if password!=password_confirmation:
             is_valid=False
             flash("Password and confirmation must be the same","password_validation")
@@ -66,8 +63,9 @@ class User:
     
     @classmethod
     def get_one(cls,data):
-        query="select * from users where id=%(id)s;"
+        query="select * from recipe_db.users where id=%(id)s;"
         result=connectToMySQL(DATABASE).query_db(query,data)
+        print(result)
         return cls(result[0])
     
     @classmethod
