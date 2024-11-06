@@ -56,10 +56,9 @@ class User:
         if len(password)<8:
             is_valid=False
             flash("Password not strong enough","password_validation")
-        if len(password)>0:
-            if not (password[0].isupper()):
-                is_valid=False
-                flash("The first caracter must be Uppercase","password_validation")
+        if not (password[0].isupper()):
+            is_valid=False
+            flash("The first caracter must be Uppercase","password_validation")
         if password!=password_confirmation:
             is_valid=False
             flash("Password and confirmation must be the same","password_validation")
