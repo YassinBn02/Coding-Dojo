@@ -29,6 +29,8 @@ def add_user():
 
 @app.route('/dashboard')
 def dashboard():
+    if "user_id"not in session:
+        return redirect('/')
     return render_template("dashboard.html")
 
 @app.route('/logout')
