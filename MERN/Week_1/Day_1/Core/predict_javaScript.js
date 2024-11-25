@@ -138,6 +138,6 @@ const planet = {
 }
 const planetCopy = {...planet}
 console.log(planet.composition[0] === planetCopy.composition[0]) // because we are comparing two variable and it returns true
-console.log(planet === planetCopy) // because we are comparing two variable and it returns true
+console.log(planet === planetCopy) // because we are comparing two objects and it returns false because they don't have the same memory space 
 //because we made a copy passing with value
 
