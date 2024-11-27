@@ -1,0 +1,51 @@
+.app{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #DDDDDD;
+  padding: 10px;
+}
+
+.row{
+  display: flex;
+  gap: 10px;
+}
+
+.MainContent{
+  background-color: #DF6768;
+  width: 100%;
+  height: 500px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sub{
+  display:flex;
+  gap: 30px;
+  padding: 10px;
+}
+
+.Header{
+  background-color:#6BA856;
+  width: 100%;
+  height: 100px;
+}
+
+.Subcontent{
+  background-color:#FFD972;
+  width: 30%;
+  height: 400px;
+}
+.Advertisment{
+  background-color:#B4A7D4;
+  width: 100%;
+  height: 100px;
+}
+
+.Navigation{
+  background-color:#70A8D9;
+  width: 20%;
+  height: 400px;
+}
