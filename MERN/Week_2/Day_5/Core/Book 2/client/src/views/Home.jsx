@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import { Link } from 'react-router-dom'
+import NavBar from '../components/NavBar'
 const Home = () => {
     const [Books, setBooks] = useState([])
     useEffect(()=>{
@@ -14,7 +15,9 @@ const Home = () => {
             })
     },[])
     return (
+        
         <div>
+            <NavBar title={"Cataloge"}/>
             <table className='table table-stirped table-bordered'>
                 <thead>
                     <tr className='table-active'>
