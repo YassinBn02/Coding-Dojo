@@ -6,12 +6,13 @@ const Create = () => {
     const nav=useNavigate()
     const [title,setTitle]=useState("")
     const [author,setAuthor]=useState("")
-    const [number,setNumber]=useState(0)
+    const [pages,setPages]=useState(0)
     const [isAvailable,setIsAvailable]=useState("")
     const submitHandler=(e)=>{
         console.log(isAvailable)
         e.preventDefault()
-        axios.post("http://localhost:5000/api/Book/",{title,author,number})
+        const newBook={title,author,pages,isAvailable}
+        axios.post("http://localhost:5000/api/Book/",newBook)
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -25,19 +26,31 @@ const Create = () => {
     return (
     <div>
         <NavBar title={"Add Book"} />
-        <form onSubmit={submitHandler} style={{display:"flex", flexDirection:"column"}}>
+        <div className="container">
+        <form onSubmit={submitHandler} style={{display:"flex", flexDirection:"column",alignItems:"center",paddingTop:30}}>
+            <div className="col-3">
+            <div className='mb-3 d-flex flex-column gap-2'>
             <label>Title</label>
-            <input type="text" onChange={(e)=>setTitle(e.target.value)} />
-            <label>Author Name</label>
-            <input type="text" onChange={(e)=>setAuthor(e.target.value)}/>
-            <label>Page Count</label>
-            <input type="Number" onChange={(e)=>setNumber(e.target.value)} />
-            <div>
-            <label>Is it available</label>
-            <input type="checkbox" onChange={(e)=>setIsAvailable(e.target.value)} />
+            <input type="text" onChange={(e)=>setTitle(e.target.value)} value={title}/>
             </div>
-            <button className='btn btn-success'>Add Book</button>
+            <div className="mb-3 d-flex flex-column gap-2">
+            <label>Author Name</label>
+            <input type="text" onChange={(e)=>setAuthor(e.target.value)} value={author}/>
+            </div>
+            <div className="mb-3 d-flex flex-column gap-2">
+            <label>Page Count</label>
+            <input type="Number" onChange={(e)=>setPages(e.target.value)} value={pages} />
+            </div>
+            <div className='mb-3 d-flex gap-2'>
+            <label>Is it available?</label>
+            <input checked={isAvailable} type="checkbox" onChange={(e)=>setIsAvailable(e.target.checked)} />
+            </div>
+            <div className="d-flex justify-content-center">
+            <button className='btn btn-primary'>Add Book</button>
+            </div>
+            </div>
         </form>
+        </div>
     </div>
     )
 }

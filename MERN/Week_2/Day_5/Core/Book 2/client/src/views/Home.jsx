@@ -18,6 +18,7 @@ const Home = () => {
         
         <div>
             <NavBar title={"Cataloge"}/>
+            <div className="container">
             <table className='table table-stirped table-bordered'>
                 <thead>
                     <tr className='table-active'>
@@ -42,6 +43,7 @@ const Home = () => {
                     }
                 </tbody>
             </table>
+            </div>
         </div>
     )
 }

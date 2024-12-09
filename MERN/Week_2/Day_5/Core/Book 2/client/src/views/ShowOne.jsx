@@ -23,14 +23,14 @@ const ShowOne = () => {
         })
     }
     return (
-        <div>
+        <div className='d-flex flex-column gap-5'>
             <NavBar title={Book.title}/>
-        <div style={{display:'flex',flexDirection:"column",gap:10,alignContent:'center',textAlign:"center"}}>
+        <div className='container d-flex flex-column align-items-center border p-5' style={{width:"600px",height:"300px"}}>
             <h2>{Book.title}</h2>
             <p>By {Book.author}</p>
             <p>Page count: {Book.pages}</p>
             {Book.isAvailable? <p style={{color:"#4DAF50"}}>Available for borrowing</p>:<p style={{color:"red"}}>Not available</p>}
-            {Book.isAvailable?<button onClick={Borrow} className='btn btn-danger' style={{width:100,marginLeft:500}}>Borrow</button>:""} 
+            {Book.isAvailable?<button onClick={Borrow} className='btn btn-danger'>Borrow</button>:""} 
         </div>
         </div>
     )

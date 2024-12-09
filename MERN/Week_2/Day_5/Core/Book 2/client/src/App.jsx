@@ -6,7 +6,7 @@ function App() {
   
   return (
     <>
-      <div className="container">
+      <div>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path="/books/:id/details" element={<ShowOne />} />
